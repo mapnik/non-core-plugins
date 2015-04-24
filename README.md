@@ -1,4 +1,4 @@
 non-core-plugins
 ================
 
-Archive of experimental, old, removed, or otherwise not-fit for core datasource input plugins
+Mapnik plugins that make sense to keep outside of core
