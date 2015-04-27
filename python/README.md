@@ -33,7 +33,8 @@ geometry with an appropriate level of detail for the output resolution.
 ## Initialization
 
 Only the `factory` parameter is required. This is of the form
-`[module:]callable`. If `module` is present then `module` will be imported and
+`[module:]callable` or `[module.]callable`.
+If `module` is present then `module` will be imported and
 its attribute named `callable` will be used as a factory callable. If `module`
 is omitted, then `__main__` is used. Any other parameter aside from `factory` or
 `type` will be passed directly to the callable as keyword arguments. Note that

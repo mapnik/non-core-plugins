@@ -50,11 +50,11 @@ python_datasource::python_datasource(parameters const& params)
     {
         // split factory at ':' to parse out module and callable
         std::vector<std::string> factory_split;
-        split(factory_split, factory_, is_any_of(":"));
+        split(factory_split, factory_, is_any_of(":."));
         if ((factory_split.size() < 1) || (factory_split.size() > 2))
         {
             throw mapnik::datasource_exception(
-                std::string("python: factory string must be of the form '[module:]callable' when parsing \"")
+                std::string("python: factory string must be of the form '[module:]callable' or '[module.]callable' when parsing \"")
                       + factory_ + '"');
         }
         // extract the module and the callable
